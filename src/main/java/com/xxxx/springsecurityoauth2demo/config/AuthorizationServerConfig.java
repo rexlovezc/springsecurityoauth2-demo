@@ -18,11 +18,13 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 //配置client-id
                 .withClient("admin")
                 //配置client-secret
-                .secret(passwordEncoder.encode("112233"))
+                .secret(passwordEncoder.encode("123456"))
                 //配置访问token的有效期
-                .accessTokenValiditySeconds(3600)
+//                .accessTokenValiditySeconds(3600)
+                //配置刷新token的有效期
+//                .refreshTokenValiditySeconds(864000)
                 //配置redirectUrl 用于授权成功后跳转
-                .redirectUris("http://https://www.jianshu.com/")
+                .redirectUris("http://www.jianshu.com/")
                 //配置申请的权限范围
                 .scopes("all")
                 //配置grant_type,表示授权类型
